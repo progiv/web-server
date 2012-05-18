@@ -1,1 +1,8 @@
-Hello, World!
+My homework. You don't need it. Even if you know me.
+
+build:
+	cd "project folder"
+	mkdir build
+	cd build
+	cmake ..
+	make

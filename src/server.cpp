@@ -12,8 +12,10 @@
 
 #include "thread.hpp"
 #include "server.hpp"
+
 using namespace std;
 #define BACK_LOG 5
+
 void *client(void *arg){
 	Thread *t = (Thread*)arg;
 	t->receive();
