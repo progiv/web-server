@@ -10,7 +10,6 @@ Thread::Thread(){
 }
 Thread::~Thread(){
 	//std::cout << "Closing client socket" <<std::endl;
-	shutdown(this->fd, SHUT_RDWR);
 	close(this->fd);
 }
 void Thread::receive(){
@@ -85,4 +84,5 @@ void Thread::respond(){
 	//TODO split the string for buffer send
 	fdProxy(d, fd);
 	close(d);
+	shutdown(fd, SHUT_RDWR);
 }

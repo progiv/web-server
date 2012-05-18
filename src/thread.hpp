@@ -13,7 +13,6 @@ extern char RESPOND[];
 struct Thread{
 	int fd;
 	sockaddr_in addr;
-	pthread_t t;
 	std::string input;
 	
 	Thread();

@@ -15,8 +15,12 @@ int main(int argc, char ** argv){
 		if (NULL != getcwd(buf,1000));
 			std::cout <<"Working from:"<< std::endl << buf << std::endl;
 	}
-	Server server(40000);
-	server.work();
+	try{
+		Server server(40000);
+		server.work();
+	} catch (const char* s){
+		std::cout << s << std::endl;
+	}
 	std::cout << "End of working - something is going strange." << std::endl;
 	return 0;
 }
